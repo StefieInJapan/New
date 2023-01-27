@@ -1,0 +1,179 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(25, 25, 45, 0.75);
+  --color-green:#37af45;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 390;
+  line-height: 1.5;
+  color: var(--color-white);
+  margin: 0;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(30, 58, 158, 0.6),
+      rgba(30, 130, 206, 0.6)
+    ),
+    url(https://imgix.bustle.com/rehost/2016/9/13/51947b68-6bf4-4e00-a8f2-c12e34edd2b1.jpg?w=1200&h=630&q=70&fit=crop&crop=faces&fm=jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 380;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.1rem auto 0 auto;
+}
+
+@media (min-width: 580px) {
+  .container {
+    max-width: 545px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.header {
+  padding: 0 0.63rem;
+  margin-bottom: 1.9rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 210;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.30rem;
+  font-size: 0.8rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.8rem 0.630rem;
+  border-radius: 0.30rem;
+}
+
+@media (min-width: 500px) {
+  form {
+    padding: 2.6rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.30rem auto;
+  padding: 0.28rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.4rem;
+  padding: 0.4rem 0.80rem;
+  color: grey;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 120, 250, 0.30);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.650rem;
+  min-height: 1.30rem;
+  min-width: 1.30rem;
+}
+
+.input-textarea {
+  min-height: 115px;
+  width: 100%;
+  padding: 0.650rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.78rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
